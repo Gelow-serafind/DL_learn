@@ -9,3 +9,6 @@
 上传代码到 main 分支
 - git pull origin main
 拉代码
+
+- git remote -v
+查看连接到哪里
