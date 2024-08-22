@@ -15,11 +15,14 @@ def synthetic_data(w, b, num_examples):
 def data_iter(batch_size, features, labels):
     num_examples = len(features)
     indices = list(range(num_examples))
+    print('incices=',indices)
     # 这些样本是随机读取的，没有特定的顺序
     random.shuffle(indices)
+    print('incices=',indices)
+    #重点解读这段for
     for i in range(0, num_examples, batch_size):
-        batch_indices = torch.tensor(
-            indices[i: min(i + batch_size, num_examples)])
+        batch_indices = torch.tensor(indices[i: min(i + batch_size, num_examples)])
+        print(batch_indices)
         yield features[batch_indices], labels[batch_indices]
 
 true_w = torch.tensor([2, -3.4])
