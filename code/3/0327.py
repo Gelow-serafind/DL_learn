@@ -48,9 +48,9 @@ true_w = torch.tensor([2, -3.4])
 true_b = 4.2
 features, labels = synthetic_data(true_w, true_b, 1000)
 
-batch_size = 10
+batch_size = 1000
 lr = 0.03
-num_epochs = 3
+num_epochs = 300
 net = linreg
 loss = squared_loss
 
