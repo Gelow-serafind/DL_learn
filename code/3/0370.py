@@ -2,6 +2,7 @@ import torch
 from torch import nn
 from d2l import torch as d2l
 from IPython import display
+import utils_ch3
 
 class Accumulator:
     """在n个变量上累加"""
@@ -134,6 +135,6 @@ if __name__ == "__main__":
     trainer = torch.optim.SGD(net.parameters(), lr=0.1)
 
     num_epochs = 10
-    train_ch3(net, train_iter, test_iter, loss, num_epochs, trainer)
+    utils_ch3.train_ch3(net, train_iter, test_iter, loss, num_epochs, trainer)
 
 
